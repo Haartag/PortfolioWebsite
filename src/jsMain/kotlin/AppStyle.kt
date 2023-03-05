@@ -20,4 +20,26 @@ object AppStyle : StyleSheet() {
     val Logo by style {
         width(100.percent)
     }
+
+    val MainIntro by style {
+        display(DisplayStyle.Flex)
+        flexDirection(FlexDirection.Row)
+        width(100.percent)
+        height(320.px)
+        backgroundColor(Color("#f0a499"))
+    }
+
+    val Photo by style {
+        marginLeft(10.percent)
+        maxHeight(80.percent)
+        paddingTop(32.px)
+    }
+
+    val TextBoxPadding by style {
+        padding(5.percent)
+    }
+
+    val TextBoxMargin by style {
+        paddingTop(24.px)
+    }
 }
