@@ -26,7 +26,7 @@ object AppStyle : StyleSheet() {
         flexDirection(FlexDirection.Row)
         width(100.percent)
         height(320.px)
-        backgroundColor(Color("#f0a499"))
+        backgroundColor(Color("#99988E"))
     }
 
     val Photo by style {
@@ -42,4 +42,26 @@ object AppStyle : StyleSheet() {
     val TextBoxMargin by style {
         paddingTop(24.px)
     }
+
+    val CardTitle by style {
+        paddingTop(24.px)
+        paddingLeft(24.px)
+    }
+
+    val CardText by style {
+        paddingLeft(24.px)
+    }
+
+    val Icon by style {
+        marginLeft(5.percent)
+        marginTop(5.percent)
+        height(104.px)
+        width(104.px)
+    }
+
+    val Screenshot by style {
+        height(100.percent)
+        padding(24.px)
+    }
+
 }
