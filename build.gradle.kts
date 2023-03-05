@@ -13,11 +13,16 @@ repositories {
     google()
     mavenCentral()
     maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
+    maven("https://mvnrepository.com/artifact/dev.petuska/kmdc")
 }
 
 kotlin {
     js(IR) {
         browser {
+            commonWebpackConfig {
+                cssSupport { enabled = true }
+                scssSupport { enabled = true }
+            }
             testTask {
                 testLogging.showStandardStreams = true
                 useKarma {
@@ -33,6 +38,10 @@ kotlin {
             dependencies {
                 implementation(compose.web.core)
                 implementation(compose.runtime)
+
+
+                implementation("dev.petuska:kmdc:0.1.0")
+                implementation("dev.petuska:kmdcx:0.1.0")
             }
         }
         val jsTest by getting {
