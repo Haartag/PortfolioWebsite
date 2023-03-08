@@ -11,6 +11,7 @@ import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.A
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Img
+import org.jetbrains.compose.web.dom.Section
 
 /**
  * Big screenshot
@@ -91,8 +92,8 @@ fun Techs(
             }
         }
     ) {
-        techs.forEach {
-            MDCBody1(it, attrs = {
+        techs.forEachIndexed {index, item ->
+            MDCBody1(item, attrs = {
                 style {
                     border(
                         width = 1.px,
@@ -100,8 +101,62 @@ fun Techs(
                         color = Color("#000000")
                     )
                     padding(8.px)
+                    if (index != 0) marginTop(-1.px)
                 }
             })
+        }
+    }
+}
+
+@Composable
+fun SmallTechs(
+    techs: List<String>
+) {
+    Section(
+        attrs = {
+            style {
+                display(DisplayStyle.Flex)
+                flexDirection(FlexDirection.Column)
+            }
+        }
+    ) {
+        val rows = if (techs.size % 3 == 0) techs.size / 3 else techs.size / 3 + 1
+
+        MDCList(
+            type = MDCListType.Textual,
+            attrs = {
+                style {
+                    flexDirection(FlexDirection.Column)
+                }
+            }
+        ) {
+            repeat(rows) {row ->
+                val columns = if (techs.size - row * 3 >= 3) 3 else techs.size - row * 3
+                Div(
+                    attrs = {
+                        style {
+                            display(DisplayStyle.Flex)
+                            flexDirection(FlexDirection.Row)
+                            if (row != 0) marginTop(-1.px)
+                        }
+                    }
+                ) {
+                    repeat(columns) {column ->
+                        MDCBody1(techs[row * 3 + column], attrs = {
+                            style {
+                                border(
+                                    width = 1.px,
+                                    style = LineStyle.Solid,
+                                    color = Color("#000000")
+                                )
+                                padding(8.px)
+                                width(20.percent)
+                                if (column != 0) marginLeft(-1.px)
+                            }
+                        })
+                    }
+                }
+            }
         }
     }
 }
