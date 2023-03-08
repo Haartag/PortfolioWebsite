@@ -41,6 +41,21 @@ fun PopUpScreen(
                 smallScreenshots.addAll(skip)
             }
         )
-        ShortDialog(currentScreenshot)
+        ShortDialog(
+            mainScreenshot = currentScreenshot,
+            icon = portfolioData.img,
+            name = portfolioData.itemName,
+            shortText = portfolioData.shortDescription,
+            longText = portfolioData.longDescription,
+            links = portfolioData.links,
+            screenshots = smallScreenshots,
+            techs = portfolioData.techDescription,
+            onClick = {
+                currentScreenshot = smallScreenshots[it]
+                val skip = smallScreenshots.take(it)
+                smallScreenshots.removeRange(0, it)
+                smallScreenshots.addAll(skip)
+            }
+        )
     }
 }

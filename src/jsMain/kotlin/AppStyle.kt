@@ -81,7 +81,6 @@ object AppStyle : StyleSheet() {
 
     val DialogScreenshot by style {
         boxSizing("border-box")
-        height(480.px)
         property("width", "auto")
         padding(12.px)
     }

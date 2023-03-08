@@ -3,11 +3,8 @@ package composables.Dialog
 import AppStyle
 import androidx.compose.runtime.Composable
 import data.Links
-import dev.petuska.kmdc.typography.MDCBody1
-import dev.petuska.kmdc.typography.MDCH4
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.Div
-import org.jetbrains.compose.web.dom.Img
 import org.jetbrains.compose.web.dom.Section
 
 /**
@@ -39,7 +36,7 @@ fun LongDialog(
             }
         ) {
             // First column - big image
-            MainImage(mainScreenshot)
+            MainImage(mainScreenshot, 480.px)
 
 
             // Second column - main content
@@ -54,67 +51,17 @@ fun LongDialog(
             ) {
 
                 // Row 1 - icon and name
-                Div(
-                    attrs = {
-                        style {
-                            display(DisplayStyle.Flex)
-                            flexDirection(FlexDirection.Row)
-                        }
-                    }
-                ) {
-                    Img(icon, attrs = {
-                        classes(AppStyle.Icon)
-                    })
-                    MDCH4(name, attrs = {
-                        style { padding(36.px) }
-                    })
-                }
+                Title(icon, name)
 
                 // Row 2 - texts
-                Div(
-                    attrs = {
-                        style {
-                            display(DisplayStyle.Flex)
-                            flexDirection(FlexDirection.Column)
-                            paddingTop(24.px)
-                            justifyContent(JustifyContent.SpaceBetween)
-                        }
-                    }
-                ) {
-                    MDCBody1(shortText, attrs = {
-                        style {
-                            fontStyle("Italic")
-                        }
-                    })
-                    MDCBody1(longText, attrs = {
-                        style {
-                            paddingTop(24.px)
-                        }
-                    })
-                    LinkButtons(links)
-                }
+                Texts(shortText, longText)
+
+                //Row 3 - links
+                LinkButtons(links)
 
                 // Row 4 - screenshot selector
-                Div(
-                    attrs = {
-                        style {
-                            justifyContent(JustifyContent.SpaceBetween)
-                        }
-                        classes(AppStyle.DialogHideOnSmall)
-                    }
-                ) {
-                    Div(
-                        attrs = {
-                            style {
-                                display(DisplayStyle.Flex)
-                                flexDirection(FlexDirection.Row)
-                            }
-                        }
-                    ) {
-                        SmallImages(screenshots.drop(1)) {
-                            onClick(it + 1)
-                        }
-                    }
+                SmallImages(screenshots.drop(1)) {
+                    onClick(it + 1)
                 }
             }
             Techs(techs)
