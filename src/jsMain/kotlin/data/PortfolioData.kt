@@ -1,5 +1,10 @@
 package data
 
+
+data class Links(
+    val git: String,
+    val googlePlay: String? = null
+)
 enum class PortfolioData(
     val id: Int,
     val itemName: String,
@@ -9,8 +14,7 @@ enum class PortfolioData(
     val shortDescription: String,
     val longDescription: String,
     val techDescription: List<String>,
-    val git: String,
-    val googlePlay: String? = null
+    val links: Links,
 ) {
     ISS (
         id = 30,
@@ -23,7 +27,10 @@ enum class PortfolioData(
                 " \"Well, the space station orbits Earth about every 90 minutes, so that means in a 24 hour day, " +
                 "the space station orbits approximately 16 times.\"",
         techDescription = listOf("Jetpack Compose", "Clean architecture", "Hilt", "Google maps API", "Retrofit2"),
-        git = "https://github.com/Haartag/GoogleMapsIssLocation"
+        links = Links(
+            git = "https://github.com/Haartag/GoogleMapsIssLocation"
+        ),
+
     ),
     FOOD (
         id = 20,
@@ -36,8 +43,11 @@ enum class PortfolioData(
                 "supplies, tools, and anything else you can think of!",
         techDescription = listOf("Kotlin", "Jetpack Compose", "Clean Architecture", "Kotlin Coroutines", "Room", "Hilt",
             "Coil", "JUnit"),
-        git = "https://github.com/Haartag/ComposedStorage",
-        googlePlay = "https://play.google.com/store/apps/details?id=com.valerytimofeev.composedstorage"
+        links = Links(
+            git = "https://github.com/Haartag/ComposedStorage",
+            googlePlay = "https://play.google.com/store/apps/details?id=com.valerytimofeev.composedstorage"
+        ),
+
     ),
     HH (
         id = 10,
@@ -50,8 +60,11 @@ enum class PortfolioData(
                 "determine the correct contents of Pandora's Box. You will be able to find out the percentage chance " +
                 "of rewards, the possible range of the number of guards and the most probable guards of the box.",
         techDescription = listOf("Kotlin", "Jetpack Compose", "Clean Architecture", "Kotlin Coroutines", "Room", "Hilt", "JUnit"),
-        git = "https://github.com/Haartag/H3Pand",
-        googlePlay = "https://play.google.com/store/apps/details?id=com.valerytimofeev.h3pand"
+        links = Links(
+            git = "https://github.com/Haartag/H3Pand",
+            googlePlay = "https://play.google.com/store/apps/details?id=com.valerytimofeev.h3pand"
+        )
+
     ),
     WEB (
         id = 99,
@@ -62,7 +75,10 @@ enum class PortfolioData(
         shortDescription = "Simple portfolio website on Kotlin Compose Web",
         longDescription = "",
         techDescription = listOf("Kotlin Multiplatform", "Compose Web", "KMDC"),
-        git = "https://github.com/Haartag/PortfolioWebsite"
+        links = Links(
+            git = "https://github.com/Haartag/PortfolioWebsite"
+        )
+
     ),
     TEST (
         id = 77,
@@ -74,6 +90,8 @@ enum class PortfolioData(
         longDescription = "",
         techDescription = listOf("Kotlin", "Jetpack Compose", "Clean Architecture", "Hilt", "Kotlin Coroutines",
             "Coil", "Retrofit", "OkHttp", "Google Maps API", "Palette", "JUnit", "Mockk"),
-        git = "https://github.com/Haartag/LiveHackTestTask"
+        links = Links(
+            git = "https://github.com/Haartag/LiveHackTestTask"
+        )
     )
 }

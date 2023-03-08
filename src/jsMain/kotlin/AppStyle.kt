@@ -11,6 +11,21 @@ object AppStyle : StyleSheet() {
         }
     }
 
+    val DialogHideOnSmall by style {
+        media(mediaMaxWidth(1200.px)) {
+            self style {
+                display(DisplayStyle.None)
+            }
+        }
+    }
+    val DialogShowOnSmall by style {
+        media(mediaMinWidth(1200.px)) {
+            self style {
+                display(DisplayStyle.None)
+            }
+        }
+    }
+
     val HeaderDarkGray by style {
         width(100.percent)
         height(80.px)
@@ -62,6 +77,22 @@ object AppStyle : StyleSheet() {
     val Screenshot by style {
         height(100.percent)
         padding(24.px)
+    }
+
+    val DialogScreenshot by style {
+        boxSizing("border-box")
+        height(480.px)
+        property("width", "auto")
+        padding(12.px)
+    }
+
+    val DialogScreenshotSmall by style {
+        height(160.px)
+        padding(8.px)
+    }
+
+    val LinkIcon by style {
+        width(140.px)
     }
 
 }

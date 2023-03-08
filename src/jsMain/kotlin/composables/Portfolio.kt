@@ -2,6 +2,7 @@ package composables
 
 import AppStyle
 import androidx.compose.runtime.*
+import composables.Dialog.PopUpScreen
 import data.PortfolioData
 import dev.petuska.kmdc.card.MDCCard
 import dev.petuska.kmdc.card.MDCCardType
@@ -42,6 +43,13 @@ fun PortfolioTile(
     portfolioData: PortfolioData,
 ) {
     var clicked by remember { mutableStateOf(false) }
+    if (clicked) {
+        PopUpScreen(
+            portfolioData,
+            isDialogOpen = { clicked },
+            closeDialog = {clicked = it}
+        )
+    }
 
     MDCCard(
         type = MDCCardType.Elevated,
