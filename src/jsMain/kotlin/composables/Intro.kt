@@ -39,5 +39,27 @@ fun Intro() {
                 Text (IntroDataObject.introData.text)
             }
         }
+
+        /**
+         * Intro part with LinkedIn and CV links, now disabled
+         */
+        /*        Div(
+                    attrs = {
+                        classes(AppStyle.TextBoxPadding)
+                    }
+                ) {
+                    A(
+                        href = IntroDataObject.introData.linkedIn,
+                        attrs = {
+                            style {
+                                outline("none")
+                            }
+                        }
+                    ) {
+                        Img("icLinked.png", attrs = {
+                            classes(AppStyle.LinkIcon)
+                        })
+                    }
+                }*/
     }
 }
