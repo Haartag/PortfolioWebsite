@@ -4,6 +4,7 @@ import AppStyle
 import androidx.compose.runtime.Composable
 import data.IntroDataObject
 import dev.petuska.kmdc.typography.MDCBody1
+import org.jetbrains.compose.web.css.fontFamily
 import org.jetbrains.compose.web.dom.*
 
 /**
@@ -22,18 +23,17 @@ fun Intro() {
                 classes(AppStyle.TextBoxPadding)
             }
         ) {
-            H1 {
-                Text(IntroDataObject.introData.subTitle)
-            }
             H1(
                 attrs = {
-                    classes(AppStyle.TextBoxMargin)
+                    style {
+                        fontFamily("Monaco")
+                    }
                 }
             ) {
                 Text(IntroDataObject.introData.title)
             }
 
-            IntroDataObject.introData.text.forEach {paragraph ->
+            IntroDataObject.introData.text.forEach { paragraph ->
                 MDCBody1(
                     text = paragraph,
                     attrs = {
