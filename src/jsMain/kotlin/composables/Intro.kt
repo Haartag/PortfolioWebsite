@@ -3,6 +3,7 @@ package composables
 import AppStyle
 import androidx.compose.runtime.Composable
 import data.IntroDataObject
+import dev.petuska.kmdc.typography.MDCBody1
 import org.jetbrains.compose.web.dom.*
 
 /**
@@ -31,12 +32,14 @@ fun Intro() {
             ) {
                 Text(IntroDataObject.introData.title)
             }
-            H4(
-                attrs = {
-                    classes(AppStyle.TextBoxMargin)
-                }
-            ) {
-                Text (IntroDataObject.introData.text)
+
+            IntroDataObject.introData.text.forEach {paragraph ->
+                MDCBody1(
+                    text = paragraph,
+                    attrs = {
+                        classes(AppStyle.TextBoxMargin)
+                    }
+                )
             }
         }
 

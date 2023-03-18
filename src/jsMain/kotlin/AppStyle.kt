@@ -42,12 +42,24 @@ object AppStyle : StyleSheet() {
         width(100.percent)
         height(320.px)
         backgroundColor(Color("#99988E"))
+        media(mediaMaxWidth(1200.px)) {
+            self style {
+                height(480.px)
+            }
+        }
     }
 
     val Photo by style {
         marginLeft(10.percent)
         maxHeight(80.percent)
         paddingTop(32.px)
+        media(mediaMaxWidth(1200.px)) {
+            self style {
+                marginLeft(7.5.percent)
+                maxHeight(50.percent)
+                paddingTop(32.px)
+            }
+        }
     }
 
     val TextBoxPadding by style {
