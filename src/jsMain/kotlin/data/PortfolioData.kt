@@ -70,7 +70,7 @@ enum class PortfolioData(
         id = 99,
         itemName = "...and this website!",
         img = "icWeb.png",
-        screenshot = listOf(""),
+        screenshot = listOf("scWeb1.png", "scWeb2.png"),
         color = "#748392",
         shortDescription = "Simple portfolio website on Kotlin Compose Web",
         longDescription = "",
