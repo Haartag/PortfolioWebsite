@@ -24,6 +24,7 @@ fun PortfolioLayout(
     Div({
         style {
             width(100.percent)
+            marginTop((-1).px)
             display(DisplayStyle.Flex)
             flexDirection(FlexDirection.Column)
             alignItems(AlignItems.Center)
