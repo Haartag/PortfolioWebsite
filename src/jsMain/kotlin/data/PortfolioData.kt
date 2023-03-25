@@ -38,7 +38,7 @@ enum class PortfolioData(
         img = "icFood.png",
         screenshot = listOf("scFood1.png", "scFood2.png", "scFood3.png", "scFood4.png"),
         color = "#e88c5d",
-        shortDescription = "Simple app to manage storage of something.",
+        shortDescription = "Simple app to manage storage of something. Or maybe even everything.",
         longDescription = "3akroma is a simple and easy to learn and manage app to track and store anything - groceries, " +
                 "supplies, tools, and anything else you can think of!",
         techDescription = listOf("Kotlin", "Jetpack Compose", "Clean Architecture", "Kotlin Coroutines", "Room", "Hilt",
@@ -55,7 +55,7 @@ enum class PortfolioData(
         img = "icH3Pand.png",
         screenshot = listOf("scH3Pand1.png", "scH3Pand2.png", "scH3Pand3.png", "scH3Pand4.png"),
         color = "#E0BF59",
-        shortDescription = "Advanced pandora's box calculator for Heroes III HotA.",
+        shortDescription = "An app for a 20-year-old retro-game. Advanced pandora's box calculator for Heroes III HotA.",
         longDescription = "Heroes Helper is a simple and easy-to-use app for Heroes III HotA that allows you to " +
                 "determine the correct contents of Pandora's Box. You will be able to find out the percentage chance " +
                 "of rewards, the possible range of the number of guards and the most probable guards of the box.",
@@ -72,8 +72,9 @@ enum class PortfolioData(
         img = "icWeb.png",
         screenshot = listOf("scWeb1.png", "scWeb2.png"),
         color = "#748392",
-        shortDescription = "Simple portfolio website on Kotlin Compose Web",
-        longDescription = "",
+        shortDescription = "Simple portfolio website on Kotlin + Compose Web",
+        longDescription = "A website made entirely in Kotlin, using the Compose Web. A little ugly, but hey, " +
+                "all in Kotlin!",
         techDescription = listOf("Kotlin Multiplatform", "Compose Web", "KMDC"),
         links = Links(
             git = "https://github.com/Haartag/PortfolioWebsite"
@@ -87,7 +88,7 @@ enum class PortfolioData(
         screenshot = listOf("scTest1.png", "scTest2.png", "scTest3.png"),
         color = "#104090",
         shortDescription = "",
-        longDescription = "",
+        longDescription = "The most interesting test tasks.",
         techDescription = listOf("Kotlin", "Jetpack Compose", "Clean Architecture", "Hilt", "Kotlin Coroutines",
             "Coil", "Retrofit", "OkHttp", "Google Maps API", "Palette", "JUnit", "Mockk"),
         links = Links(
