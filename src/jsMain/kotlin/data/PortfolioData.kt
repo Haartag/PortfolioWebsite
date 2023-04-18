@@ -2,7 +2,7 @@ package data
 
 
 data class Links(
-    val git: String,
+    val git: String? = null,
     val googlePlay: String? = null
 )
 enum class PortfolioData(
@@ -94,5 +94,20 @@ enum class PortfolioData(
         links = Links(
             git = "https://github.com/Haartag/LiveHackTestTask"
         )
+    ),
+    HTTP (
+        id = 22,
+        itemName = "HTTP Requester",
+        img = "icHttp.png",
+        screenshot = listOf("scHttp1.png", "scHttp2.png", "scHttp3.png", "scHttp4.png",),
+        color = "#B96EC2",
+        shortDescription = "HTTP requester with proxy, multithreading and other cool features ",
+        longDescription = "Application for sending HTTP requests (GET or POST) with a set of very useful features: the " +
+                "use of proxies, random headers, multi-threading to perform a large number of simultaneous requests, " +
+                "saving requests to favorites, logs (including saving them into External storage for access), " +
+                "the ability to set a chain of requests and execute them within one session and much more.",
+        techDescription = listOf("Kotlin", "Jetpack Compose", "Clean Architecture", "Hilt", "Kotlin Coroutines",
+            "Retrofit2", "OkHttp3", "Kotlinx serialization", "Shared preferences"),
+        links = Links()
     )
 }

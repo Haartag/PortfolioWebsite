@@ -196,17 +196,19 @@ fun LinkButtons(
                 })
             }
         }
-        A(
-            href = links.git,
-            attrs = {
-                style {
-                    outline("none")
+        if (links.git != null) {
+            A(
+                href = links.git,
+                attrs = {
+                    style {
+                        outline("none")
+                    }
                 }
+            ) {
+                Img("gitHubIcon.png", attrs = {
+                    classes(AppStyle.LinkIcon)
+                })
             }
-        ) {
-            Img("gitHubIcon.png", attrs = {
-                classes(AppStyle.LinkIcon)
-            })
         }
     }
 }
