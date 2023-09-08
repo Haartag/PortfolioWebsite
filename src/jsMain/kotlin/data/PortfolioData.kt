@@ -50,7 +50,7 @@ enum class PortfolioData(
 
     ),
     HH (
-        id = 10,
+        id = 15,
         itemName = "Heroes Helper",
         img = "icH3Pand.png",
         screenshot = listOf("scH3Pand1.png", "scH3Pand2.png", "scH3Pand3.png", "scH3Pand4.png"),
@@ -81,7 +81,7 @@ enum class PortfolioData(
         )
 
     ),
-    TEST (
+/*    TEST (
         id = 77,
         itemName = "Various test tasks",
         img = "icTest.png",
@@ -94,9 +94,9 @@ enum class PortfolioData(
         links = Links(
             git = "https://github.com/Haartag/LiveHackTestTask"
         )
-    ),
+    ),*/
     HTTP (
-        id = 22,
+        id = 18,
         itemName = "HTTP Requester",
         img = "icHttp.png",
         screenshot = listOf("scHttp1.png", "scHttp2.png", "scHttp3.png", "scHttp4.png",),
@@ -109,5 +109,53 @@ enum class PortfolioData(
         techDescription = listOf("Kotlin", "Jetpack Compose", "Clean Architecture", "Hilt", "Kotlin Coroutines",
             "Retrofit2", "OkHttp3", "Kotlinx serialization", "Shared preferences"),
         links = Links()
-    )
+    ),
+    EBAY (
+        id = 5,
+        itemName = "eBay orders ",
+        img = "icEbay.png",
+        screenshot = listOf("scEbay1.png", "scEbay2.png", "scEbay3.png",),
+        color = "#A2D5F2",
+        shortDescription = "App for managing eBay orders and tracking parcels ",
+        longDescription = "Introducing the eBay Order Management App. This application interfaces with eBay's API to " +
+                "download order information for a selected timeframe and organizes the data into a user-specified " +
+                "Google Sheets table. Leveraging the power of MLKit, the app is capable of identifying parcel " +
+                "tracking codes through the camera. Once recognized, these codes can be marked as 'Delivered' " +
+                "in the Google Sheets table or new codes can be added as required.",
+        techDescription = listOf("Kotlin", "Jetpack Compose", "Clean Architecture", "Hilt", "Kotlin Coroutines",
+            "Retrofit2", "OkHttp3", "CameraX", "mlKit", "eBay API", "Google Sheets API"),
+        links = Links()
+    ),
+    PROP (
+        id = 7,
+        itemName = "Property Management Solution",
+        img = "icProp.png",
+        screenshot = listOf("scProp1.png", "scProp2.png", "scProp3.png", "scProp4.png",),
+        color = "#CB99C9",
+        shortDescription = "Property Management Solution - Tracking & Automation",
+        longDescription = "The app offers property owners access to their accrued payments, providing them with complete " +
+                "control over their finances. For administrators, app provides robust tools to manage customer payments, " +
+                "including the ability to send personalized or broadcast push notifications. The application further " +
+                "simplifies tasks with its automatic calculation feature, ensuring accurate tracking of payment " +
+                "schedules and debts.",
+        techDescription = listOf("Kotlin", "Jetpack Compose", "Clean Architecture", "Hilt", "Kotlin Coroutines",
+            "Firebase", "Push notifications", "Retrofit2", "OkHttp3", "Coil", "Shared preferences"),
+        links = Links()
+    ),
+    LANG (
+        id = 3,
+        itemName = "Pronunciation Learning",
+        img = "icEbay.png",
+        screenshot = listOf("scEbay1.png", "scEbay2.png", "scEbay3.png",),
+        color = "#A2D5F2",
+        shortDescription = "App for managing eBay orders and tracking parcels ",
+        longDescription = "Introducing the eBay Order Management App. This application interfaces with eBay's API to " +
+                "download order information for a selected timeframe and organizes the data into a user-specified " +
+                "Google Sheets table. Leveraging the power of MLKit, the app is capable of identifying parcel " +
+                "tracking codes through the camera. Once recognized, these codes can be marked as 'Delivered' " +
+                "in the Google Sheets table or new codes can be added as required.",
+        techDescription = listOf("Kotlin", "Jetpack Compose", "Clean Architecture", "Hilt", "Kotlin Coroutines",
+            "Retrofit2", "OkHttp3", "CameraX", "mlKit", "eBay API", "Google Sheets API"),
+        links = Links()
+    ),
 }
