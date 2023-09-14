@@ -115,7 +115,7 @@ enum class PortfolioData(
         itemName = "eBay orders ",
         img = "icEbay.png",
         screenshot = listOf("scEbay1.png", "scEbay2.png", "scEbay3.png",),
-        color = "#A2D5F2",
+        color = "#BBE5A9",
         shortDescription = "App for managing eBay orders and tracking parcels ",
         longDescription = "Introducing the eBay Order Management App. This application interfaces with eBay's API to " +
                 "download order information for a selected timeframe and organizes the data into a user-specified " +
@@ -145,17 +145,16 @@ enum class PortfolioData(
     LANG (
         id = 3,
         itemName = "Pronunciation Learning",
-        img = "icEbay.png",
-        screenshot = listOf("scEbay1.png", "scEbay2.png", "scEbay3.png",),
+        img = "icLang.png",
+        screenshot = listOf("scLang1.png", "scLang2.png", "scLang3.png", "scLang4.png",),
         color = "#A2D5F2",
-        shortDescription = "App for managing eBay orders and tracking parcels ",
-        longDescription = "Introducing the eBay Order Management App. This application interfaces with eBay's API to " +
-                "download order information for a selected timeframe and organizes the data into a user-specified " +
-                "Google Sheets table. Leveraging the power of MLKit, the app is capable of identifying parcel " +
-                "tracking codes through the camera. Once recognized, these codes can be marked as 'Delivered' " +
-                "in the Google Sheets table or new codes can be added as required.",
+        shortDescription = "App for interactive language practice with speech synthesis.",
+        longDescription = "An Android app designed in Kotlin for practical language learning. Utilizing Google Cloud " +
+                "Text-to-Speech, it allows users to generate speech from text, create sequences with customizable " +
+                "voices, and curate word sets. The built-in player offers easy playback, while progress tracking keeps " +
+                "learners on course.",
         techDescription = listOf("Kotlin", "Jetpack Compose", "Clean Architecture", "Hilt", "Kotlin Coroutines",
-            "Retrofit2", "OkHttp3", "CameraX", "mlKit", "eBay API", "Google Sheets API"),
+            "Text-to-Speech","Google Cloud Services", "Retrofit2", "OkHttp3", "Room Database"),
         links = Links()
     ),
 }
