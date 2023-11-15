@@ -16,8 +16,8 @@ enum class PortfolioData(
     val techDescription: List<String>,
     val links: Links,
 ) {
-    ISS (
-        id = 30,
+/*    ISS (
+        id = 40,
         itemName = "ISS locator",
         img = "icIss.png",
         screenshot = listOf("scISS1.png", "scISS2.png", "scISS3.png"),
@@ -31,9 +31,9 @@ enum class PortfolioData(
             git = "https://github.com/Haartag/GoogleMapsIssLocation"
         ),
 
-    ),
+    ),*/
     FOOD (
-        id = 20,
+        id = 30,
         itemName = "3akroma",
         img = "icFood.png",
         screenshot = listOf("scFood1.png", "scFood2.png", "scFood3.png", "scFood4.png"),
@@ -50,7 +50,7 @@ enum class PortfolioData(
 
     ),
     HH (
-        id = 15,
+        id = 20,
         itemName = "Heroes Helper",
         img = "icH3Pand.png",
         screenshot = listOf("scH3Pand1.png", "scH3Pand2.png", "scH3Pand3.png", "scH3Pand4.png"),
@@ -96,7 +96,7 @@ enum class PortfolioData(
         )
     ),*/
     HTTP (
-        id = 18,
+        id = 25,
         itemName = "HTTP Requester",
         img = "icHttp.png",
         screenshot = listOf("scHttp1.png", "scHttp2.png", "scHttp3.png", "scHttp4.png",),
@@ -111,7 +111,7 @@ enum class PortfolioData(
         links = Links()
     ),
     EBAY (
-        id = 5,
+        id = 10,
         itemName = "eBay orders ",
         img = "icEbay.png",
         screenshot = listOf("scEbay1.png", "scEbay2.png", "scEbay3.png",),
@@ -143,7 +143,7 @@ enum class PortfolioData(
         links = Links()
     ),
     LANG (
-        id = 3,
+        id = 5,
         itemName = "Pronunciation Learning",
         img = "icLang.png",
         screenshot = listOf("scLang1.png", "scLang2.png", "scLang3.png", "scLang4.png",),
@@ -156,5 +156,22 @@ enum class PortfolioData(
         techDescription = listOf("Kotlin", "Jetpack Compose", "Clean Architecture", "Hilt", "Kotlin Coroutines",
             "Text-to-Speech","Google Cloud Services", "Retrofit2", "OkHttp3", "Room Database"),
         links = Links()
+    ),
+    CHAT (
+        id = 3,
+        itemName = "Chat with OpenAI",
+        img = "icChat.png",
+        screenshot = listOf("scChat1.png", "scChat2.png", "scChat3.png", "scChat4.png",),
+        color = "#FFB6C1",
+        shortDescription = "AI chat app with customizable prompts and advanced OpenAI integration.",
+        longDescription = "Intuitive Android Kotlin app designed for dynamic interactions with OpenAI's GPT models." +
+                "This app allows you to craft, store, organize, and categorize prompts with ease. " +
+                "Tailor your conversational AI journey by selecting between models, and fine-tune your dialogue with " +
+                "customizable settings for temperature and topP.",
+        techDescription = listOf("Kotlin", "Jetpack Compose", "Clean Architecture", "Hilt", "Kotlin Coroutines",
+            "OpenAI API", "Shared preferences", "SqlDelight Database"),
+        links = Links(
+            git = "https://github.com/Haartag/GPTMobile"
+        )
     ),
 }
